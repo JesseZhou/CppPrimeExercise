@@ -3,7 +3,6 @@
 
 using namespace std;
 
-
 typedef void(*func)(void);
 
 void showPersonalInfo(void);
