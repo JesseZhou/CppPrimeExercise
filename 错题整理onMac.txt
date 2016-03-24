@@ -1,0 +1,25 @@
+ch8复习题
+	4、现有结构
+	  struct box
+	  {
+	    char maker[40];
+	    float height;
+	    float width;
+	    float length;
+	    float volume;	
+	  };
+
+	  a、编写函数，以box的引用为形参，显示每个成员的值
+
+	  错解：
+	    void method1( struct box & b1 )
+	   {
+		cout << b1.maker << b1.height << b1.width << b1.length << b1.volume << endl;
+	   }		
+
+	   正解：
+	     因为只需要展示数据，不需要处理数据，所以入口参数定义为const类型
+	    void method1( const struct box & b1 )
+	   {
+		cout << b1.maker << b1.height << b1.width << b1.length << b1.volume << endl;
+	   }		   
