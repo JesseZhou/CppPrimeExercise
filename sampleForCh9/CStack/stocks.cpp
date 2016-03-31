@@ -92,7 +92,22 @@ void Stock::show()
 {
     using std::cout;
     using std::endl;
-
-    
-    
+    cout << m_company << "is here\n";
 }
+
+Stock::Stock()
+{
+	std::strcpy(m_company, "no name");
+	m_shares = 0;
+	m_share_val = 0.0;
+	m_total_val = 0.0;
+}
+
+const Stock & Stock::topval(const Stock &s )const
+{
+	if( s.m_total_val > m_total_val )
+		return s;
+	else
+		return *this;	
+}
+

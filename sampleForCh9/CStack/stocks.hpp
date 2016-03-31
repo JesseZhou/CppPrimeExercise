@@ -27,8 +27,11 @@ public:
     void sell( int num, double price );
     void update(double price);
     void show();
-    // æŸä¸ªæ„é€ å‡½æ•°
+    // ÁíÒ»¸ö³õÊ¼·½·¨ 
     Stock( const char * co, int n = 1000, double pr = 0.0 );
+    Stock();
+    ~Stock(){};
+    const Stock & topval(const Stock &s )const;
 };
 
 #endif /* stocks_hpp */
