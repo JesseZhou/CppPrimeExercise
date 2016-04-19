@@ -1,0 +1,79 @@
+	滑稽,流氓,懈怠,玩世之心浮起.倘若世间有人以温柔慰我,何至于堕入如此魔道?
+	
+		
+	
+	const
+	
+	volatile: 可能有程序本身之外的力量修改内存单元的值.所以不能在优化时,因为访问频繁而做优化,而将数据放到寄存器.
+	必须每次都去读.
+	
+	extern 表示引用声明
+	
+	.h
+	声明extern const
+	
+	.m
+	定义const
+	
+	c++找函数
+	看声明
+	如果是内联
+		在当前文件里找
+		
+	是外联,在所有文件里找
+	
+	如果没找到,在库里找
+	
+	当c和c++混用时,找函数变得有点困难
+	对c而言,链接时,函数_spiff(int)标识为 _spiff
+	而对c++而言,链接时,函数_spiff(int)标识为 _spiff_i
+	
+	解决方法是:在文件里告诉链接器,要找的符号名被解析为C还是C++方式
+	
+	extern 声明是为了告诉链接器,以此为标识去寻找对应的方法
+	
+	生活的感慨:下午时用android调试界面也行呵
+	
+	动态分配时  new (static变量的地址) someType  分配空间时会分配此静态变量对应的内存空间
+	这是一种非常规的动态分配方式
+	
+	namespace VS 全局
+		namespace是全局变量的一种特殊表示形式
+		
+	倘若在代码块里using namespace::variable;
+	则此variable会成为局部变量.
+	但如果在调用时才引用,不会成为局部变量
+	
+	如
+	// 命名空间
+	namespace Jill {
+    double bucket( double n ){return 0.0f;}
+    double fetch;
+    struct chaff{
+        char dross[20];
+        int slag;
+    };
+    }
+	
+    // 全局
+	char fetch;
+	
+	int main(){
+		// 局部
+		char fetch;
+		
+		cin >> Jill::fetch;
+		cin >> ::fetch;
+		cin >> fetch;		
+		
+		return 0;
+	}
+	
+	using是一种声明名称或名称空间的方式,放在代码块外整个编译单元可用
+	放在代码块里整个代码块可用,且当成自动变量
+	
+	using namespace std;
+	
+	
+	
+	
