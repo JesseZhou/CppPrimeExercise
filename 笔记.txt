@@ -75,5 +75,24 @@
 	using namespace std;
 	
 	
+	#include <iostream>和#include <iostream.h> 的差别
+	前者是调用某命名空间里的标识，需要额外加using namespace才好用
+	后者是调用某文件，不用加命名空间编译
+	
+	当然，如果库工具里没有iostream，那就只能用#include <iostream.h>
+	
+	
+	c++体现了OOP的多种特性
+	包括
+		抽象
+		封装
+		多态
+		继承
+		重用代码
+		
+	实现的媒介是类
+
+	
+	
 	
 	

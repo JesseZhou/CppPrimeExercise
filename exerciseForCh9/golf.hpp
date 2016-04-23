@@ -18,15 +18,19 @@ struct golf
     int handicap;
 };
 
+struct chaff{
+};
+
+// ÕâÊÇµÚÒ»¸ö¹¹Ôìº¯Êı°É 
 void setgolf( golf &g, const char *name, int he );
 
-// ç”¨ç”¨æˆ·çš„è¾“å…¥åˆå§‹åŒ–gçš„å€¼
+// ÕâÊÇµÚ¶ş¸ö¹¹Ôìº¯Êı°É 
 int setgolf(golf & g);
 
-// é‡ç½®handicapçš„å€¼
-void handicap( golf &g, int he );
+// ÖØÖÃvalue 
+void handicap(golf &g, int he);
 
-// å±•ç¤ºgçš„å†…å®¹
+// ´òÓ¡Öµ ÓÃÒıÓÃµÄºÃ´¦ÊÇ²»±Ø´´½¨ÁÙÊ±¶ÔÏó 
 void showgolf( const golf &g );
 
 #endif /* golf_hpp */
