@@ -1,24 +1,26 @@
 #include <iostream>
 #include "Move.h"
+#include "listSample.h"
 
 using namespace std;
 
 int main(void)
 {
-	Move one;
-	Move two( 23,125 );
-	Move three( 150,9 );
+	list  nList;
+	nlist.add(34);
+	nlist.add(33);
+	nlist.add(644);
+	nlist.add(74);
 	
-	one.showmove();
+	printf("%s", nlist.isEmpty()?"is Empty":"not Empty" );
+	printf("%s", nlist.isFull()?"is Full":"not Full" );
 	
-	one.add(two);
-	one.add(three);
+	void doIncrease(Item &a)
+	{
+		a++;
+	}
 	
-	one.showmove();
-	
-	one.reset();
-	
-	one.showmove();
+	nList.visit(doIncrease);
 	
 	return 0;
 }
