@@ -1,4 +1,5 @@
 #include "listSample.h"
+#include <stdio.h>
 
 list::list()
 {
@@ -30,5 +31,15 @@ void list::visit( void(*pf)(Item &) )
 	for( int i = 0; i < index; ++i )
 	{
 			pf( array[i] );
+	}
+}
+
+void list::description(void)
+{
+	using namespace std;
+	
+	for( int i = 0; i < index; ++i )
+	{
+		printf( "%15d",array[i] );
 	}
 }
