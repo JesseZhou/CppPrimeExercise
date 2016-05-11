@@ -171,3 +171,92 @@
 	可访问列表中的数据，并执行操作
 	
 	
+	重载操作符（+-*/）
+	
+	友元方法
+	
+	重载 << 
+	
+	（这是黑科技）重载操作符，可以让自定义类的行为更像内置类型
+	
+	（这也是黑科技）访问私有数据的方法
+	
+	重载：名字同，但参数不同的方法（或者抽象符号），实现不同的功能。（这和类无关）
+	
+	多态：不同子类调用同名父类方法时，表现不同
+	
+	特殊函数（构造/析构/操作符重载）的特殊处就是返回值的与众不同
+	
+	sid.operator+(sara);
+	
+	Time 计时器
+	提供：
+	
+	private:
+		addMin
+		addHr
+	
+	public:
+		清空时间
+		显示时间
+		给两个时间做加法（也许这里就是重载运算符的操作）
+		Time Add(const Time &t)const
+		
+	class Time{
+	
+	private:
+	
+	public:
+		clear
+		sum
+		
+		AddMin(  )
+		{
+			min += m;
+			hour += min/60;
+			min mod = 60;
+		}
+		
+		AddHour
+		{
+			
+		}
+		
+		sum
+		{
+			Time time = *this;
+			time.add(m);
+			time.add(h);
+		
+		}
+		
+		show()const
+		{
+			std:cout << 
+		}
+	}
+	
+	Time operator*() const;
+	
+	Time operator*( double m, const Time & t );
+	
+	
+	重载了操作符'*'
+	math里的定义,参数是基本类型
+	参数是time 和 long的，就是重载
+	
+	在类中声明
+	
+	classA{
+	
+		friend Time operator*( double m, const Time & t );
+	
+	}
+	
+	
+	// 定义
+	Time operator*( double m, const Time & t )
+	{
+		Time time = t;
+		long minute = 
+	}
